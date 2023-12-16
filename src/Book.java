@@ -3,7 +3,7 @@ public class Book {
 
     private String name;
 
-    private String number;
+    private Integer number;
 
     private String position;
 
@@ -12,7 +12,7 @@ public class Book {
     public Book(String bid, String name, String number, String position){
         this.bid = bid;
         this.name = name;
-        this.number = number;
+        this.number = Integer.valueOf(number);
         this.position = position;
     }
 
@@ -32,12 +32,12 @@ public class Book {
         this.name = name;
     }
 
-    public String getNumber() {
+    public Integer getNumber() {
         return number;
     }
 
     public void setNumber(String number) {
-        this.number = number;
+        this.number = Integer.valueOf(number);
     }
 
     public String getPosition() {

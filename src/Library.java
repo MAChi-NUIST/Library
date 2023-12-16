@@ -54,7 +54,7 @@ public class Library {
         System.out.println("type in book name");
         String name = sc.nextLine();
         System.out.println("type in  number of books");
-        String number = sc.nextLine();
+        Integer number = sc.nextInt();
         System.out.println("type in position of book");
         String position = sc.nextLine();
 
@@ -62,7 +62,7 @@ public class Library {
         Book b = new Book();
         b.setBid(bid);
         b.setName(name);
-        b.setNumber(number);
+        b.setNumber(String.valueOf(number));
         b.setPosition(position);
 
         //add b to the array
@@ -96,7 +96,7 @@ public class Library {
 
     //make method to show book information
     public static void viewBook(ArrayList<Book> array){
-        //  /t means tab
+        //make method to list all books
         System.out.println("id");
     }
 
