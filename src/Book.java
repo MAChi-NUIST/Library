@@ -6,15 +6,17 @@ public class Book {
     private Integer number;
 
     private String position;
+    private String availability;
 
 
     public Book(){
     }
-    public Book(String bid, String name, Integer number, String position){
+    public Book(String bid, String name, Integer number, String position,String availability){
         this.bid = bid;
         this.name = name;
         this.number = Integer.valueOf(number);
         this.position = position;
+        this.availability =availability;
     }
 
     public String getBid() {
@@ -48,6 +50,9 @@ public class Book {
     public void setPosition(String position) {
         this.position = position;
     }
+
+    public String getAvailability(){return availability;}
+    public void setAvailability(String availability){this.availability =availability;;}
 
 
 

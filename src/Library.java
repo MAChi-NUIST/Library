@@ -5,7 +5,7 @@ public class Library {
     public static void main(String[] args){
         //create a array to save book information
         ArrayList<Book> array = new ArrayList<Book>();
-        while (true){
+      circle:  while (true){
             System.out.println("---------Welcome to Library manage system----------");
             System.out.println("1.add book");
             System.out.println("2.delete book");
@@ -21,25 +21,32 @@ public class Library {
                 case "1":
                     System.out.println("add book");
                     addBook(array);
-                    break;
+                    break ;
+
                 case "2":
                     System.out.println("delete book");
                     deleteBook(array);
-                    break;
+                    break ;
+
 
                 case "3":
                     System.out.println("change book");
                     break;
+
                 case "4":
                     System.out.println("view all books");
-                    break;
+                    viewBook(array);
+                    break ;
+
 
                 case "5":
                     System.out.println("find book");
+
                     break;
+
                 case "6":
                     System.out.println("thank you for using");
-                    break;
+                    break circle;
 
                 default:System.out.println("inout error");
             }
@@ -47,6 +54,7 @@ public class Library {
     }
     //make a method to add book information
     public static void addBook(ArrayList<Book> array){
+
         Scanner sc = new Scanner(System.in);
 
         System.out.println("type in book id");
@@ -57,14 +65,17 @@ public class Library {
         Integer number = sc.nextInt();
         System.out.println("type in position of book");
         String position = sc.nextLine();
-        System.out.println("type in 'yes' or 'no' to show wheather the book can be borrowed");
-
+        System.out.println("type in 'yes' or 'no' to show  the book can be borrowed or not");
+        String availability = sc.nextLine();
         //create a book
         Book b = new Book();
         b.setBid(bid);
         b.setName(name);
         b.setNumber(String.valueOf(number));
         b.setPosition(position);
+        b.setAvailability(availability);
+
+
 
         //add b to the array
         array.add(b);
@@ -98,35 +109,22 @@ public class Library {
     //make method to show book information
     public static void viewBook(ArrayList<Book> array){
         //make method to list all books
-        System.out.println("id");
-    }
+        System.out.println("bid\t\tname\tnumber\tposition\tavailability");
+        for (int i = 0; i < array.size(); i++) {
+            Book b = array.get(i);
+            System.out.println(b.getBid() + "\t" + b.getName() + "\t"+ b.getNumber() + "\t" +b.getPosition() + "\t" + b.getAvailability());
+
+
+        }
+        }
 
     public static void changeBook(ArrayList<Book> array){
 
     }
 
     // make method to find book
-    public static void findBook(ArrayList<Book> array){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("type in id of the book you want to find");
-        String bid = sc.nextLine();
-        int asshole = -13;
-        for(int i=0;i<array.size();i++){
-            Book c  = array.get(i);
-            if(c.getBid().equals(bid)){
-                asshole = i;
-                break;
-            }
+    public static void findBook(ArrayList<Book> array) {
 
-        }
-        if(asshole == -13){
-            System.out.println("book id not found");
-
-        }else{
-        }
 
     }
-
-
-
 }
