@@ -7,9 +7,10 @@ public class Book {
 
     private String position;
 
+
     public Book(){
     }
-    public Book(String bid, String name, String number, String position){
+    public Book(String bid, String name, Integer number, String position){
         this.bid = bid;
         this.name = name;
         this.number = Integer.valueOf(number);
@@ -47,5 +48,7 @@ public class Book {
     public void setPosition(String position) {
         this.position = position;
     }
+
+
 
 }

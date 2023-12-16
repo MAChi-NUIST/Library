@@ -57,6 +57,7 @@ public class Library {
         Integer number = sc.nextInt();
         System.out.println("type in position of book");
         String position = sc.nextLine();
+        System.out.println("type in 'yes' or 'no' to show wheather the book can be borrowed");
 
         //create a book
         Book b = new Book();
