@@ -1,12 +1,12 @@
 public class Book {
     private String bid;
-    //bianhao
+
     private String name;
-    //shuming
+
     private String number;
-    //shuliang
+
     private String position;
-    //weizhi
+
     public Book(){
     }
     public Book(String bid, String name, String number, String position){

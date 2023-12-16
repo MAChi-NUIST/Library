@@ -40,6 +40,8 @@ public class Library {
                 case "6":
                     System.out.println("thank you for using");
                     break;
+
+                default:System.out.println("inout error");
             }
         }
     }
