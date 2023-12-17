@@ -30,6 +30,7 @@ public class Library {
 
                 case "3":
                     System.out.println("change book");
+                    changeBook(array);
                     break;
 
                 case "4":
@@ -113,7 +114,44 @@ public class Library {
         //make method to change book information
 
     public static void changeBook(ArrayList<Book> array){
-        
+        Scanner sc =new Scanner(System.in);
+        System.out.println("type in the book id you want to change");
+        String bid =sc.nextLine();
+        int index =getIndex(array,bid);
+        if (index==-1){System.out.println("the id is not existed");
+        return;
+        }
+
+        Book b = array.get(index);
+
+        System.out.println("type in the book name you want to change");
+        String newName = sc.nextLine();
+        b.setName(newName);
+        System.out.println("type in the book number you want to change");
+        Integer newNumber = Integer.valueOf(sc.nextLine());
+        b.setNumber(String.valueOf(newNumber));
+        System.out.println("type in the book position you want to change");
+        String newPosition = sc.nextLine();
+        b.setPosition(newPosition);
+        System.out.println("type in the book availability you want to change");
+        String newAvailability = sc.nextLine();
+        b.setAvailability(newAvailability);
+        System.out.println("The book has been changed");
+
+
+    }
+
+    public static int getIndex(ArrayList<Book> array,String bid){
+        for (int i= 0;i<array.size();i++){
+            Book b = array.get(i);
+            bid = b.getBid();
+            if (bid.equals(bid)){
+                return i;
+            }
+
+
+        }
+        return -1;
 
     }
 
