@@ -11,8 +11,7 @@ public class Library {
             System.out.println("2.delete book");
             System.out.println("3.change book");
             System.out.println("4.view all books");
-            System.out.println("5.find book");
-            System.out.println("6.quit");
+            System.out.println("5.quit");
             System.out.println("type in number");
 
             Scanner sc = new Scanner(System.in);
@@ -38,13 +37,7 @@ public class Library {
                     viewBook(array);
                     break ;
 
-
                 case "5":
-                    System.out.println("find book");
-
-                    break;
-
-                case "6":
                     System.out.println("thank you for using");
                     break circle;
 
@@ -106,7 +99,7 @@ public class Library {
         }
     }
 
-    //make method to show book information
+    //make method to show all book information
     public static void viewBook(ArrayList<Book> array){
         //make method to list all books
         System.out.println("bid\t\tname\tnumber\tposition\tavailability");
@@ -117,14 +110,12 @@ public class Library {
 
         }
         }
+        //make method to change book information
 
     public static void changeBook(ArrayList<Book> array){
+        
 
     }
 
-    // make method to find book
-    public static void findBook(ArrayList<Book> array) {
 
-
-    }
 }
